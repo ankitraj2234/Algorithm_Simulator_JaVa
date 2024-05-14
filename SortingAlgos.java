@@ -11,9 +11,9 @@ public class SortingAlgos extends JFrame {
 
     public SortingAlgos() {
         setTitle("Sorting Algorithms");
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         setLocationRelativeTo(null);
-        setResizable(false);
+        setResizable(true);
 
         JPanel panel = new JPanel();
         panel.setLayout(new GridBagLayout());
@@ -36,6 +36,7 @@ public class SortingAlgos extends JFrame {
 
         GridBagConstraints gbc = new GridBagConstraints();
         gbc.fill = GridBagConstraints.HORIZONTAL;
+        gbc.weightx = 1.0;
         gbc.insets = new Insets(5, 5, 5, 5);
 
         gbc.gridx = 0;
