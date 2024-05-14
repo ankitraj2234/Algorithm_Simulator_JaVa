@@ -23,12 +23,14 @@ public class HomePage extends JFrame {
         JButton sortingButton = new JButton("Sorting");
         JButton searchingButton = new JButton("Searching");
         JButton insertionDeletionButton = new JButton("Insertion/Deletion");
+        JButton linkedListButton = new JButton("LinkedList Operations");
         JButton aboutDeveloperButton = new JButton("About Developer");
 
         Dimension buttonSize = new Dimension(120, 30);
         sortingButton.setPreferredSize(buttonSize);
         searchingButton.setPreferredSize(buttonSize);
         insertionDeletionButton.setPreferredSize(buttonSize);
+        linkedListButton.setPreferredSize(buttonSize);
 
         JLabel madeByLabel = new JLabel("Made By Ankit Raj");
         madeByLabel.setHorizontalAlignment(JLabel.CENTER);
@@ -61,6 +63,11 @@ public class HomePage extends JFrame {
         gbc.weightx = 1.0;
         panel.add(insertionDeletionButton, gbc);
 
+        gbc.gridx = 1;
+        gbc.gridy = 1;
+        gbc.weightx = 1.0;
+        panel.add(linkedListButton, gbc);
+
         sortingButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 redirectToSortingGUI();
@@ -79,14 +86,20 @@ public class HomePage extends JFrame {
             }
         });
 
+        linkedListButton.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                openLinkedListOperationsGUI();
+            }
+        });
+
         aboutDeveloperButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 openAboutDeveloperGUI();
             }
         });
 
-        gbc.gridx = 1;
-        gbc.gridy = 1;
+        gbc.gridx = 0;
+        gbc.gridy = 2;
         gbc.weightx = 1.0;
         gbc.anchor = GridBagConstraints.LINE_START;
         gbc.insets = new Insets(5, 10, 10, 10);
@@ -96,33 +109,32 @@ public class HomePage extends JFrame {
     private void redirectToSortingGUI() {
         SortingAlgos sortingAlgos = new SortingAlgos();
         sortingAlgos.setVisible(true);
-//        dispose(); // close the homepage gui
     }
 
     private void redirectToSearchingGUI() {
         Searching searching = new Searching();
         searching.setVisible(true);
-//        dispose();
     }
 
     private void openInsertionDeletionGUI() {
         Iad iad = new Iad();
         iad.setVisible(true);
-//        dispose();
+    }
+
+    private void openLinkedListOperationsGUI() {
+        LinkedListOperations linkedListOperations = new LinkedListOperations();
+        linkedListOperations.setVisible(true);
     }
 
     private void openAboutDeveloperGUI() {
         AboutDeveloper aboutDeveloper = new AboutDeveloper();
         aboutDeveloper.setVisible(true);
-//        dispose();
     }
 
     public static void main(String[] args) {
         SwingUtilities.invokeLater(new Runnable() {
             public void run() {
                 HomePage homePage = new HomePage();
-
-                // the frame size and make it visible
                 homePage.setSize(400, 200);
                 homePage.setVisible(true);
             }
