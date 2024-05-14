@@ -10,7 +10,7 @@ public class Searching extends JFrame {
 
     public Searching() {
         setTitle("Searching Algorithms");
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         setSize(400, 300);
         setLocationRelativeTo(null);
 
