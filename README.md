@@ -1,4 +1,9 @@
 # Algorithm_Simulator_JaVa
+
+
+V2.0: https://github.com/ankitraj2234/Algorithm-Simulator-2.0
+
+
 The Algorithm Simulator is an interactive educational tool designed to help users understand the concepts of various data structures and sorting algorithms through hands-on experience. This Java-based application provides an intuitive graphical user interface (GUI) that allows users to visualize the inner workings of popular algorithms and data structures.
 
 The project begins with a user-friendly homepage featuring three main buttons: "Sorting," "Searching," and "Insertion/Deletion." Users can choose the desired category by clicking on the respective button.
